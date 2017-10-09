@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#959596;}
+	.st1{fill:#696C70;}
+	.st2{fill:url(#SVGID_1_);}
+</style>
+<g>
+	<g>
+		<g>
+			<g>
+				<g>
+					<ellipse class="st0" cx="74.9" cy="75" rx="73.9" ry="74"/>
+				</g>
+				<g>
+					<g>
+						<g>
+							<path class="st1" d="M101.8,22.1c-2.9,3.5-9.7,14-13.4,16.5c-5.6,3.8-22.9,4.5-31.8,6.7C49.3,47.2,37.3,56.1,44,59.7
+								c13.9,7.3,83.7-12.6,88,2.5c2.7,9.6-35.3,7.9-35.7,17.9c-0.2,5.8,16.5,6.8,22.3,6.7c7.9-0.2,22.5-6.9,30.4-14
+								c-0.8-25.6-14.5-48-34.8-60.6C109,15.1,104.5,18.9,101.8,22.1z"/>
+						</g>
+						<g>
+							<path class="st1" d="M73,114.7c2-3.5-3.9-12.2-7.5-14.2c-8.2-4.6-30.5,8.6-37.2,2.2c-1.8-1.7-1.8-8,0-9.7
+								c2.1-2,8.9,1.2,12,0.8c4-0.8,14.7-2.6,14.9-6.7c0.1-4.4-11.4-6.8-15.6-8.2c-7.9-2.6-28.6-4.6-38.5-5.5c0,0.6,0,1,0,1.6
+								c0,14.5,4.2,28.1,11.4,39.5c8.5,3.2,22.3,3.7,29.4,3.9C49.7,118.7,69,121.4,73,114.7z"/>
+						</g>
+						<path class="st1" d="M138.6,112.7c-4.9-0.7-10.4-1-16.3-1c-19.3,0-35,4-35,8.9c0,4.9,15.6,8.9,35,8.9c0.9,0,1.8,0,2.7,0
+							C130.2,124.6,134.8,118.9,138.6,112.7z"/>
+						<path class="st1" d="M67.1,20.8c0-3.2-15.6-5.9-35.2-5.9c-4.7,3.4-8.9,7.3-12.7,11.6c3.7,0.2,7.7,0.3,11.8,0.3
+							C50.9,26.7,67.1,24,67.1,20.8z"/>
+					</g>
+				</g>
+			</g>
+			<g>
+				
+					<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1" y1="77" x2="74.9441" y2="77" gradientTransform="matrix(1 0 0 -1 0 152)">
+					<stop  offset="0" style="stop-color:#1A171B;stop-opacity:0.5"/>
+					<stop  offset="2.616996e-02" style="stop-color:#1A171B;stop-opacity:0.4869"/>
+					<stop  offset="1" style="stop-color:#1A171B;stop-opacity:0"/>
+				</linearGradient>
+				<path class="st2" d="M39.2,75c0,51.6,35.7,74,35.7,74C34.1,149,1,115.9,1,75C1,34.1,34.2,1,74.9,1C74.9,1,39.2,25.3,39.2,75z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
