@@ -15,15 +15,17 @@
 
     <div class="instructions">
 
-        <div class="help"><a href="#" id="help-button">?</a></div>
+        <div class="help"><a href="#" id="help-button">X</a></div>
 
         <h1>Space Calulator Instrutions</h1>
         <ol>
-            <li>Choose the planet.</li>
             <li>Enter the age.</li>
-            <li>Enter the unit (if available).</li>
+            <li>Choose the unit - years, days, seconds.*</li>
+            <li>Choose the planet.</li>
             <li>Click "Calculate".</li>
         </ol>
+
+        <p>* <em><strong>Note:</strong></em> days and seconds are only availble with Earth.</p>
     </div>
 
     <div class="wrapper">
@@ -81,6 +83,7 @@
 </div>
 
 <p class="copyright">Chris Connor &copy; <?php echo date('Y'); ?></p>
+<p><a href="http://www.freepik.com/free-vector/sun-and-planets-background-in-flat-design_1239653.htm" target="_blank">Designed by Freepik</a></p>
 <script src="/js/scripts.js"></script>
 
 </body>

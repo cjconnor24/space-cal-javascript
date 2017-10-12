@@ -5,17 +5,12 @@
     margin:0;
     box-sizing: border-box;
 }
-html {
-    background:rgb(23,47,71);
-    background:url(/images/background.svg) rgb(23,47,71);
-    background-size:cover;
-    background-position:top center;
-    background-repeat: no-repeat;
-}
 body {
     font-family:Arial,Helvetica;
     font-size:18px;
-
+    background:url(/images/background.svg) rgb(0,41,59);
+    background-position: left center;
+    background-repeat:no-repeat;
 }
 #page {
     display:none;
@@ -78,10 +73,10 @@ body {
 .disabled {
     opacity:0.5;
 }
-.disabled:hover {
-    background-color:rgba(255,255,255,0.2)!important;
-    cursor: not-allowed;
-}
+/*.disabled:hover {*/
+    /*background-color:rgba(255,255,255,0.2)!important;*/
+    /*cursor: not-allowed;*/
+/*}*/
 .numeric a,
 .planets a {
     display:block;
@@ -100,7 +95,8 @@ body {
     background-size:50%;
     background-position:center center;
     background-repeat:no-repeat;
-    background-color:rgba(255,255,255,0.2);
+    background-color:rgba(255,255,255,0.9);
+    text-shadow: 1px 1px 5px #333;
 
 }
 .planets a {
@@ -140,13 +136,13 @@ a.units {
 /*.planets a.neptune {background-image:url(/images/neptune.svg);}*/
 /*.planets a.pluto {background-image:url(/images/pluto.svg);}*/
 
-.numeric a:hover,
-.planets a:hover {
-    background-size:81%;
-    color:#000;
-    background-color:rgba(255,255,255,0.5);
-    /*transform: rotate(360deg);*/
-}
+/*.numeric a:hover,*/
+/*.planets a:hover {*/
+    /*background-size:81%;*/
+    /*color:#000;*/
+    /*background-color:rgba(255,255,255,0.5);*/
+    /*!*transform: rotate(360deg);*!*/
+/*}*/
 .selected {
     border:1px solid #eee;
     background-color:rgba(255,255,255,0.6)!important;
@@ -166,10 +162,10 @@ a.units {
     width:97%;
     background:rgba(153,255,0,0.5);
 }
-a#calculate-button:hover {
-    background:rgba(153,255,0,0.8);
-    color:#FFF;
-}
+/*a#calculate-button:hover {*/
+    /*background:rgba(153,255,0,0.8);*/
+    /*color:#FFF;*/
+/*}*/
 .display {
     width:100%;
     height:50px;
@@ -229,7 +225,7 @@ a#calculate-button:hover {
 .instructions {
     padding:2em 2em 2em 5em;
     border-radius:0px 10px 10px 0px;
-    width:25%;
+    width:400px;
     left:0;
     top:25%;
     background:#FFF;
@@ -238,13 +234,17 @@ a#calculate-button:hover {
     -moz-box-shadow: 5px 5px 10px #333;
     box-shadow: 5px 5px 10px #333;
     z-index:1;
-    display:none;
+    /*display:none;*/
 }
 .hide {
-    left:-22%!important;
+    left:-365px!important;
 }
 .instructions h1 {
     margin:0 0 1em 0;
+}
+.instructions p {
+    padding:1em 0;
+    font-size:0.9em;
 }
 .instructions .help a {
     text-decoration: none;
@@ -270,6 +270,29 @@ p.copyright {
     color:#FFF;
     text-shadow:1px 1px 5px #000;
     font-size:0.6em;
+
+}
+
+/* HOVER RULES FOR TOUCH */
+@media (hover: hover) {
+
+    /*.numeric a:hover,*/
+    /*.planets a:hover {*/
+        /*background-size:81%;*/
+        /*color:#000;*/
+        /*background-color:rgba(255,255,255,0.5);*/
+        /*!*transform: rotate(360deg);*!*/
+    /*}*/
+
+    /*.disabled:hover {*/
+        /*background-color:rgba(255,255,255,0.2)!important;*/
+        /*cursor: not-allowed;*/
+    /*}*/
+
+    /*a#calculate-button:hover {*/
+        /*background:rgba(153,255,0,0.8);*/
+        /*color:#FFF;*/
+    /*}*/
 
 }
 

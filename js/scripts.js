@@ -254,8 +254,10 @@
 
        if(instructionsBox.classList.contains('hide')){
            instructionsBox.classList.remove('hide');
+           this.innerHTML = 'X';
        } else {
            instructionsBox.classList.add('hide');
+           this.innerHTML = '?';
        }
 
     }
