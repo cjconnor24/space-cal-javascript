@@ -11,42 +11,42 @@
 	<g>
 		<g>
 			<g>
-				<circle class="st0" cx="75" cy="75" r="74.5"/>
+				<circle class="st0" cx="75" cy="75" r="55.9"/>
 			</g>
 			<g>
-				<ellipse class="st1" cx="92.6" cy="26.1" rx="20.3" ry="13.2"/>
+				<ellipse class="st1" cx="88.2" cy="38.3" rx="15.2" ry="9.9"/>
 			</g>
 			<g>
-				<ellipse class="st1" cx="79.9" cy="72.9" rx="13.5" ry="5.6"/>
+				<ellipse class="st1" cx="78.7" cy="73.4" rx="10.1" ry="4.2"/>
 			</g>
 			<g>
-				<ellipse class="st1" cx="25.4" cy="63.6" rx="7.9" ry="12.3"/>
+				<ellipse class="st1" cx="37.8" cy="66.4" rx="5.9" ry="9.2"/>
 			</g>
 			<g>
-				<ellipse class="st1" cx="45.3" cy="97.3" rx="11.3" ry="9"/>
+				<ellipse class="st1" cx="52.7" cy="91.7" rx="8.5" ry="6.8"/>
 			</g>
 			<g>
-				<circle class="st1" cx="105.4" cy="116.4" r="9"/>
+				<circle class="st1" cx="97.8" cy="106.1" r="6.8"/>
 			</g>
 			<g>
-				<ellipse class="st1" cx="121.4" cy="67.3" rx="8.6" ry="6.4"/>
+				<ellipse class="st1" cx="109.8" cy="69.2" rx="6.4" ry="4.8"/>
 			</g>
 			<g>
-				<ellipse class="st1" cx="38.6" cy="29.5" rx="6.4" ry="3.4"/>
+				<ellipse class="st1" cx="47.7" cy="40.9" rx="4.8" ry="2.6"/>
 			</g>
 			<g>
-				<ellipse class="st1" cx="65.2" cy="132.3" rx="3.4" ry="4.5"/>
+				<ellipse class="st1" cx="67.6" cy="118" rx="2.6" ry="3.4"/>
 			</g>
 		</g>
 		<g>
 			
-				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0.5165" y1="77" x2="75.0168" y2="77" gradientTransform="matrix(1 0 0 -1 0 152)">
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="19.1374" y1="1003" x2="75.0125" y2="1003" gradientTransform="matrix(1 0 0 1 0 -928)">
 				<stop  offset="0" style="stop-color:#1A171B;stop-opacity:0.5"/>
 				<stop  offset="2.616996e-02" style="stop-color:#1A171B;stop-opacity:0.4869"/>
 				<stop  offset="1" style="stop-color:#1A171B;stop-opacity:0"/>
 			</linearGradient>
-			<path class="st2" d="M39,75c0,51.9,36.1,74.5,36.1,74.5C34,149.5,0.6,116.1,0.6,75C0.5,33.9,33.9,0.5,75,0.5
-				C75,0.5,39,24.9,39,75z"/>
+			<path class="st2" d="M48,75c0,38.9,27.1,55.9,27.1,55.9c-30.8,0-55.9-25.1-55.9-55.9c-0.1-30.8,25-55.9,55.8-55.9
+				C75,19.1,48,37.4,48,75z"/>
 		</g>
 	</g>
 </g>

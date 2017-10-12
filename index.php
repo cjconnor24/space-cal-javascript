@@ -30,22 +30,31 @@
 
             <a href="#" id="clear-button">C</a>
 
-            <a href="#" class="units" id="days-button">Days</a>
-            <a href="#" class="units" id="minutes-button">Minutes</a>
+            <a href="#" class="units" id="days-button">Years</a>
+            <a href="#" class="units" id="minutes-button">Days</a>
             <a href="#" class="units" id="seconds-button">Seconds</a>
+
+            <a href="#" style="width:97%;">Calculate</a>
 
         </div>
 
         <div class="planets">
-            <?php
 
+
+
+            <?php
             $planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto'];
 
             foreach($planets as $planet){
-                echo "<a href='#' class='".strtolower($planet)."'>$planet</a>";
+                echo "<a href='#' class='planet ".strtolower($planet)."'>$planet</a>";
             }
 
             ?>
+            <div class="clear"></div>
+            <div id="results">
+                Results will appear here...
+            </div>
+
         </div>
 
     </div>
@@ -54,16 +63,50 @@
 
 <script type="text/javascript">
 
-//    ELEMENTS
-
+    //    ELEMENTS
     var numericString = '';
     var display = document.getElementById('numbers');
     var placeholder = document.getElementById('placeholder');
+    var units = document.getElementById('units');
 
-    var age;
-    var units;
-    var planet;
 
+
+    var planets = {
+        Mercury:0.2408467,
+        Venus:0.61519726,
+        Earth:1,
+        Mars:1.8808158,
+        Jupiter:11.862615,
+        Saturn:29.447498,
+        Uranus:84.016846,
+        Neptune:164.79132,
+        Pluto:248.00
+    };
+
+    function outputAges(age,homeplanet){
+
+        var earthYears = planets[homeplanet] * age;
+
+        var tableData = ''
+
+        Object.keys(planets).forEach(function(key){
+
+            if(key!=homeplanet) {
+                tableData += '<p class="'+key.toLowerCase()+'"><span>' + (earthYears / planets[key]).toPrecision(5) + '</span><span class="planet"> ' + key + '</span> years' + '</a>';
+            }
+
+
+        });
+
+        console.log(tableData);
+        document.getElementById('results').innerHTML = tableData;
+
+
+    }
+
+    function getAge(){
+        return display.innerHTML;
+    }
 
 
     /**
@@ -76,11 +119,11 @@
 
     }
 
-    function clearNumbers(){
-        numericString = '';
-        display.innerHTML = '';
-        enablePlaceholder();
-    }
+//    function clearNumbers(){
+//        numericString = '';
+//        display.innerHTML = '';
+//        enablePlaceholder();
+//    }
 
     /**
      * TURN OFF THE INSTRUCTIONS PLACEHOLDER
@@ -98,7 +141,7 @@
 //    EVENTS LISTENERS
 
     var keyboardInput = document.addEventListener('keydown', function(e) {
-        e.preventDefault();
+//        e.preventDefault();
         console.log(e.key);
     });
 
@@ -106,7 +149,11 @@
     var clearButton = document.getElementById('clear-button').onclick = function (e){
 
         e.preventDefault();
-        clearNumbers();
+        numericString = '';
+        display.innerHTML = '';
+        units.innerHTML = '';
+        document.getElementById('results').innerHTML = 'Results will appear here...';
+        enablePlaceholder();
 
     }
 
@@ -131,7 +178,6 @@
 
             // DISABLE THE REGULAR LINK BEHAVIOR
             e.preventDefault();
-
             disablePlaceholder();
 
             // CHECK TO SEE IF IT WAS A NUMERIC BUTTON
@@ -148,6 +194,17 @@
             // UPDATE THE DISPLAY WITH THE NUMBER
             updateDisplay(numericString);
 
+        }
+    }
+
+    // PLANET BUTTONS
+    var planetButtons = document.querySelectorAll(".planet");
+    for(var i = 0; i < planetButtons.length; i++){
+        planetButtons[i].onclick = function(e){
+            e.preventDefault();
+            console.log(this.innerHTML + ' ' + planets[this.innerHTML]);
+
+            outputAges(getAge(),this.innerHTML);
         }
     }
 
