@@ -14,9 +14,7 @@
 
     <div class="wrapper">
 
-<!--        <input type="text" value="" placeholder="Enter age" class="display" />-->
-
-        <div id="display"><span id="numbers"></span><span id="units"></span><span id="placeholder">Enter your age</span></div>
+        <div id="display"><span id="numbers"></span><span id="units">seconds</span><span id="placeholder">Enter your age</span></div>
 
     </div>
 
@@ -32,9 +30,9 @@
 
             <a href="#" id="clear-button">C</a>
 
-            <a href="#" id="days-button">Days</a>
-            <a href="#" id="minutes-button">Minutes</a>
-            <a href="#" id="seconds-button">Seconds</a>
+            <a href="#" class="units" id="days-button">Days</a>
+            <a href="#" class="units" id="minutes-button">Minutes</a>
+            <a href="#" class="units" id="seconds-button">Seconds</a>
 
         </div>
 
@@ -56,10 +54,15 @@
 
 <script type="text/javascript">
 
-    var numericButtons = document.querySelectorAll(".numeric a.digit");
+//    ELEMENTS
+
     var numericString = '';
     var display = document.getElementById('numbers');
     var placeholder = document.getElementById('placeholder');
+
+    var age;
+    var units;
+    var planet;
 
 
 
@@ -84,9 +87,7 @@
      */
     function disablePlaceholder(){
 
-
             placeholder.style.display='none';
-
     }
 
     function enablePlaceholder(){
@@ -96,10 +97,35 @@
 
 //    EVENTS LISTENERS
 
+    var keyboardInput = document.addEventListener('keydown', function(e) {
+        e.preventDefault();
+        console.log(e.key);
+    });
+
+
     var clearButton = document.getElementById('clear-button').onclick = function (e){
+
+        e.preventDefault();
         clearNumbers();
+
     }
 
+    // UNIT BUTTONS
+    var unitButtons = document.querySelectorAll(".numeric a.units");
+    for(var i = 0; i < unitButtons.length; i++){
+        unitButtons[i].onclick = function(e){
+
+            e.preventDefault();
+            var unitDisplay = document.getElementById('units');
+            unitDisplay.style.display = 'inline';
+            unitDisplay.innerHTML = this.innerHTML;
+            console.log(this.innerHTML);
+
+        }
+    }
+
+    // NUMERIC BUTTONS
+    var numericButtons = document.querySelectorAll(".numeric a.digit");
     for(var i = 0; i < numericButtons.length; i++){
         numericButtons[i].onclick =  function(e) {
 
@@ -113,15 +139,11 @@
 
                 numericString += this.innerHTML;
 
-
-
-
             } else {
 
                 console.log('You pressed a non-integer button ' + this.innerHTML);
 
             }
-
 
             // UPDATE THE DISPLAY WITH THE NUMBER
             updateDisplay(numericString);
