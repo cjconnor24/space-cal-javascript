@@ -12,6 +12,16 @@
 
 <div id="page">
 
+    <div class="instructions">
+        <h1>Space Calulator Instrutions</h1>
+        <ol>
+            <li>Choose the planet.</li>
+            <li>Enter the age.</li>
+            <li>Enter the unit (if available).</li>
+            <li>Click "Calculate".</li>
+        </ol>
+    </div>
+
     <div class="wrapper">
 
         <div id="display"><span id="numbers"></span><span id="units">seconds</span><span id="placeholder">Enter your age</span></div>
@@ -143,17 +153,37 @@
     var keyboardInput = document.addEventListener('keydown', function(e) {
 //        e.preventDefault();
         console.log(e.key);
+
+        // CHECK TO SEE IF IT WAS A NUMERIC BUTTON
+        if(parseInt(e.key)||e.key==0){
+
+            numericString += e.key;
+            console.log('updated');
+
+        }
+
+        // CLEAR THE SCREENS IF KEYBOARD BACK SPACE OR DELETE
+        if(e.key=="Delete"||e.key=="Backspace"){
+            clearScreens();
+        }
+
+        updateDisplay(numericString);
+
+
     });
 
-
-    var clearButton = document.getElementById('clear-button').onclick = function (e){
-
-        e.preventDefault();
+    function clearScreens(){
         numericString = '';
         display.innerHTML = '';
         units.innerHTML = '';
         document.getElementById('results').innerHTML = 'Results will appear here...';
         enablePlaceholder();
+    }
+
+    var clearButton = document.getElementById('clear-button').onclick = function (e){
+
+        e.preventDefault();
+        clearScreens();
 
     }
 
@@ -161,6 +191,9 @@
     var unitButtons = document.querySelectorAll(".numeric a.units");
     for(var i = 0; i < unitButtons.length; i++){
         unitButtons[i].onclick = function(e){
+
+
+//            this.classList.add('selected');
 
             e.preventDefault();
             var unitDisplay = document.getElementById('units');
@@ -203,6 +236,8 @@
         planetButtons[i].onclick = function(e){
             e.preventDefault();
             console.log(this.innerHTML + ' ' + planets[this.innerHTML]);
+
+//            this.classList.add('selected');
 
             outputAges(getAge(),this.innerHTML);
         }
