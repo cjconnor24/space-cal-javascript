@@ -19,6 +19,9 @@ body {
 
 .slide-in {
     animation-name: example;
+    -moz-animation-name: example;
+    -o-animation-name: example;
+    -webkit-animation-name: example;
     animation-duration: 1s;
 }
 @keyframes example {
@@ -29,6 +32,9 @@ body {
 
 .shake {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -moz-animation: animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -webkit-animation: animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -o-animation: animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
 }
 @keyframes shake {
@@ -67,7 +73,6 @@ body {
 }
 
 .numeric a:nth-child(10){
-
     width:64%;
 }
 .disabled {
@@ -91,7 +96,9 @@ body {
     color:#FFF;
     position:relative;
     font-size:1.5em;
-    border-radius:4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     background-size:50%;
     background-position:center center;
     background-repeat:no-repeat;
@@ -126,23 +133,7 @@ a.units {
 .uranus {background-image:url(/images/uranus.svg);}
 .neptune {background-image:url(/images/neptune.svg);}
 .pluto {background-image:url(/images/pluto.svg);}
-/*.planets a.mercury {background-image:url(/images/mercury.svg);}*/
-/*.planets a.venus {background-image:url(/images/venus.svg);}*/
-/*.planets a.earth {background-image:url(/images/earth.svg);}*/
-/*.planets a.mars {background-image:url(/images/mars.svg);}*/
-/*.planets a.jupiter {background-image:url(/images/jupiter.svg);}*/
-/*.planets a.saturn {background-image:url(/images/saturn.svg);}*/
-/*.planets a.uranus {background-image:url(/images/uranus.svg);}*/
-/*.planets a.neptune {background-image:url(/images/neptune.svg);}*/
-/*.planets a.pluto {background-image:url(/images/pluto.svg);}*/
 
-/*.numeric a:hover,*/
-/*.planets a:hover {*/
-    /*background-size:81%;*/
-    /*color:#000;*/
-    /*background-color:rgba(255,255,255,0.5);*/
-    /*!*transform: rotate(360deg);*!*/
-/*}*/
 .selected {
     border:1px solid #eee;
     background-color:rgba(255,255,255,0.6)!important;
@@ -172,6 +163,8 @@ a.units {
     margin:1em 0;
     border:none;
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     background: #eee;
     padding:0 1em 0 1em;
     font-size:1.2em;
@@ -224,6 +217,8 @@ a.units {
 .clear {clear:both;}
 .instructions {
     padding:2em 2em 2em 5em;
+    -webkit-border-radius:0px 10px 10px 0px;
+    -moz-border-radius:0px 10px 10px 0px;
     border-radius:0px 10px 10px 0px;
     width:400px;
     left:0;
@@ -237,7 +232,7 @@ a.units {
     /*display:none;*/
 }
 .hide {
-    left:-365px!important;
+    left:-300px!important;
 }
 .instructions h1 {
     margin:0 0 1em 0;
