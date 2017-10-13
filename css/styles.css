@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+/*@import url('https://fonts.googleapis.com/css?family=Orbitron');*/
 
 * {
     padding:0;
@@ -78,10 +78,10 @@ body {
 .disabled {
     opacity:0.5;
 }
-/*.disabled:hover {*/
-    /*background-color:rgba(255,255,255,0.2)!important;*/
-    /*cursor: not-allowed;*/
-/*}*/
+.disabled:hover {
+    background-color:rgba(255,255,255,0.2)!important;
+    cursor: not-allowed;
+}
 .numeric a,
 .planets a {
     display:block;
@@ -269,27 +269,27 @@ p.copyright {
 }
 
 /* HOVER RULES FOR TOUCH */
-@media (hover: hover) {
+/*@media (hover: hover) {*/
 
-    /*.numeric a:hover,*/
-    /*.planets a:hover {*/
-        /*background-size:81%;*/
-        /*color:#000;*/
-        /*background-color:rgba(255,255,255,0.5);*/
-        /*!*transform: rotate(360deg);*!*/
-    /*}*/
+    .numeric a:hover,
+    .planets a:hover {
+        background-size:81%;
+        color:#000;
+        background-color:rgba(255,255,255,0.5);
+        /*transform: rotate(360deg);*/
+    }
 
-    /*.disabled:hover {*/
-        /*background-color:rgba(255,255,255,0.2)!important;*/
-        /*cursor: not-allowed;*/
-    /*}*/
+    .disabled:hover {
+        background-color:rgba(255,255,255,0.2)!important;
+        cursor: not-allowed;
+    }
 
-    /*a#calculate-button:hover {*/
-        /*background:rgba(153,255,0,0.8);*/
-        /*color:#FFF;*/
-    /*}*/
+    a#calculate-button:hover {
+        background:rgba(153,255,0,0.8);
+        color:#FFF;
+    }
 
-}
+/*}*/
 
 @media screen and (max-width: 1024px){
 
