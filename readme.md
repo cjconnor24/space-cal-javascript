@@ -23,5 +23,7 @@ git clone https://github.com/cjconnor24/space-cal-javascript.git
 
 Download and run on any apache / php setup - there are currently no dependancies to manage
 
+At the moment, I would reccomend viewing this via Chrome on a Desktop. I've started on some media queries however, it's still a bit buggy on mobile devices
+
 ## Youtube Demo Walkthrough
 [![Space Calculator Demo Walkthrough](https://raw.githubusercontent.com/cjconnor24/space-cal-javascript/master/images/youtube-screen.png)](https://www.youtube.com/watch?v=H47e-VlMYSU "Space Calculator Demo Walkthrough")
