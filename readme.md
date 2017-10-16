@@ -1,15 +1,10 @@
 # Space Age Calculator
 
-
-[![Space Calculator Demo Walkthrough](https://raw.githubusercontent.com/cjconnor24/space-cal-javascript/master/images/youtube-screen.png)](https://www.youtube.com/watch?v=H47e-VlMYSU "Space Calculator Demo Walkthrough")
-
-
 This space age calculator was developed as a technical test for the Arnold Clark 2017 Hackathon
 
 Given a person’s age, it should be able to calculate how old that person would be on different planets.
 
 ## Given Orbital Factors
-
 * Earth: Orbital period 365.25 Earth days, or 31,557,600 seconds
 * Mercury: Orbital period 0.2408467 Earth years
 * Venus: Orbital period 0.61519726 Earth years
@@ -21,3 +16,12 @@ Given a person’s age, it should be able to calculate how old that person would
 * And, depending on your feelings towards Pluto...
 * Pluto: Orbital period 248.00 Earth years
 
+# How to run?
+```
+git clone https://github.com/cjconnor24/space-cal-javascript.git
+```
+
+Download and run on any apache / php setup - there are currently no dependancies to manage
+
+## Youtube Demo Walkthrough
+[![Space Calculator Demo Walkthrough](https://raw.githubusercontent.com/cjconnor24/space-cal-javascript/master/images/youtube-screen.png)](https://www.youtube.com/watch?v=H47e-VlMYSU "Space Calculator Demo Walkthrough")
