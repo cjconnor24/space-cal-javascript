@@ -1,5 +1,9 @@
 # Space Age Calculator
 
+
+[![Space Calculator Demo Walkthrough](https://raw.githubusercontent.com/cjconnor24/space-cal-javascript/master/images/youtube-screen.png)](https://www.youtube.com/watch?v=H47e-VlMYSU "Space Calculator Demo Walkthrough")
+
+
 This space age calculator was developed as a technical test for the Arnold Clark 2017 Hackathon
 
 Given a person’s age, it should be able to calculate how old that person would be on different planets.
