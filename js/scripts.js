@@ -1,5 +1,5 @@
 
-// window.onload = function(e) {
+window.onload = function(e) {
 
     //
     document.getElementById('page').style.display = 'block';
@@ -11,11 +11,12 @@
     var setUnits = '';
 
 
+    // PLACEHOLDER ELEMENTS
     var display = document.getElementById('numbers');
     var placeholder = document.getElementById('placeholder');
     var units = document.getElementById('units');
 
-
+    // PLANETS ORBIT PERIODS
     var planets = {
         Mercury: 0.2408467,
         Venus: 0.61519726,
@@ -28,6 +29,11 @@
         Pluto: 248.00
     };
 
+    /**
+     * Output the calculated ages to the screen
+     * @param age
+     * @param homeplanet
+     */
     function outputAges(age, homeplanet) {
 
         if(setUnits=='Seconds'){
@@ -54,6 +60,10 @@
 
     }
 
+    /**
+     * Get the age value from the display
+     * @returns {string|*}
+     */
     function getAge() {
         return display.innerHTML;
     }
@@ -69,25 +79,25 @@
 
     }
 
-//    function clearNumbers(){
-//        numericString = '';
-//        display.innerHTML = '';
-//        enablePlaceholder();
-//    }
-
     /**
-     * TURN OFF THE INSTRUCTIONS PLACEHOLDER
+     * Disable the display placeholder
      */
     function disablePlaceholder() {
 
         placeholder.style.display = 'none';
     }
 
+    /**
+     * Enable the display placeholder
+     */
     function enablePlaceholder() {
         placeholder.style.display = '';
         placeholder.innerHTML = 'Enter your age';
     }
 
+    /**
+     * Disable the planets except earth
+     */
     function disablePlanets(){
         var planetButtons = document.getElementsByClassName('planet');
 
@@ -98,6 +108,9 @@
         }
     }
 
+    /**
+     * Re-enable the disabled planets
+     */
     function enableDisabled(){
         var planetButtons = document.getElementsByClassName('planet');
 
@@ -106,10 +119,14 @@
         }
     }
 
-//    EVENTS LISTENERS
+    // EVENT LISTENERS
 
+    /**
+     * Get keyboard input from the user
+     */
     var keyboardInput = document.addEventListener('keydown', function (e) {
-//        e.preventDefault();
+
+        //        e.preventDefault();
         console.log(e.key);
 
         // CHECK TO SEE IF IT WAS A NUMERIC BUTTON
@@ -132,6 +149,9 @@
 
     });
 
+    /**
+     * Reset everything back to initial state
+     */
     function clearScreens() {
 
         numericString = '';
@@ -145,6 +165,10 @@
 
     }
 
+    /**
+     * Event listener to clear screens
+     * @type {onclick}
+     */
     var clearButton = document.getElementById('clear-button').onclick = function (e) {
 
         e.preventDefault();
@@ -152,7 +176,9 @@
 
     }
 
-// UNIT BUTTONS
+    /**
+     * Loop through the units buttons
+     */
     var unitButtons = document.querySelectorAll(".numeric a.units");
     for (var i = 0; i < unitButtons.length; i++) {
         unitButtons[i].onclick = function (e) {
@@ -180,9 +206,9 @@
     }
 
 
-
-
-// NUMERIC BUTTONS
+    /**
+     * Loop through the numeric buttons
+     */
     var numericButtons = document.querySelectorAll(".numeric a.digit");
     for (var i = 0; i < numericButtons.length; i++) {
         numericButtons[i].onclick = function (e) {
@@ -208,7 +234,10 @@
         }
     }
 
-// PLANET BUTTONS
+
+    /**
+     * Loop through the planet buttons
+     */
     var planetButtons = document.querySelectorAll(".planet");
     for (var i = 0; i < planetButtons.length; i++) {
         planetButtons[i].onclick = function (e) {
@@ -240,6 +269,9 @@
         }
     }
 
+    /**
+     * Event listener for the calculate button
+     */
     var calculateButton = document.getElementById('calculate-button').onclick = function(e){
         e.preventDefault();
         if(setPlanet!='' && setUnits!='' &&numericString!='') {
@@ -247,6 +279,9 @@
         }
     }
 
+    /**
+     * Event listener for the help button
+     */
     var helpButton = document.getElementById('help-button').onclick = function(e){
         e.preventDefault();
 
@@ -260,7 +295,7 @@
            this.innerHTML = '?';
        }
 
-    }
+    };
 
 
-// };
+};

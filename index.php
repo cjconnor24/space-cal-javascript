@@ -83,7 +83,7 @@
 </div>
 
 <p class="copyright">Chris Connor &copy; <?php echo date('Y'); ?></p>
-<p><a href="http://www.freepik.com/free-vector/sun-and-planets-background-in-flat-design_1239653.htm" target="_blank">Designed by Freepik</a></p>
+<p class="freepik"><a href="http://www.freepik.com/free-vector/sun-and-planets-background-in-flat-design_1239653.htm" target="_blank">Background and Planets Designed by Freepik</a></p>
 <script src="/js/scripts.js"></script>
 
 </body>

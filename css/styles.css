@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css?family=Orbitron');*/
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 
 * {
     padding:0;
@@ -8,9 +8,9 @@
 body {
     font-family:Arial,Helvetica;
     font-size:18px;
-    background:url(/images/background.svg) rgb(0,41,59);
-    background-position: left center;
-    background-repeat:no-repeat;
+    background:url(/images/background.svg) rgb(0,41,59) no-repeat left bottom fixed;
+    /*background-position: ;*/
+    /*background-repeat:;*/
 }
 #page {
     display:none;
@@ -32,9 +32,9 @@ body {
 
 .shake {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    -moz-animation: animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    -webkit-animation: animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    -o-animation: animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -moz-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -webkit-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    -o-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
 }
 @keyframes shake {
@@ -232,7 +232,7 @@ a.units {
     /*display:none;*/
 }
 .hide {
-    left:-300px!important;
+    left:-370px!important;
 }
 .instructions h1 {
     margin:0 0 1em 0;
@@ -266,6 +266,13 @@ p.copyright {
     text-shadow:1px 1px 5px #000;
     font-size:0.6em;
 
+}
+.freepik a {
+    text-decoration:none;
+    padding:1em;
+    font-size:0.6em;
+    color:#333;
+    text-shadow: 1px 1px 1px #fff;
 }
 
 /* HOVER RULES FOR TOUCH */
