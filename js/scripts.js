@@ -167,21 +167,20 @@ window.onload = function(e) {
 
     /**
      * Event listener to clear screens
-     * @type {onclick}
      */
-    var clearButton = document.getElementById('clear-button').onclick = function (e) {
+    var clearButton = document.getElementById('clear-button').addEventListener("click", function (e) {
 
         e.preventDefault();
         clearScreens();
 
-    }
+    });
 
     /**
      * Loop through the units buttons
      */
     var unitButtons = document.querySelectorAll(".numeric a.units");
     for (var i = 0; i < unitButtons.length; i++) {
-        unitButtons[i].onclick = function (e) {
+        unitButtons[i].addEventListener("click", function (e) {
             e.preventDefault();
 
 
@@ -202,7 +201,7 @@ window.onload = function(e) {
 
 
 
-        }
+        });
     }
 
 
@@ -211,7 +210,8 @@ window.onload = function(e) {
      */
     var numericButtons = document.querySelectorAll(".numeric a.digit");
     for (var i = 0; i < numericButtons.length; i++) {
-        numericButtons[i].onclick = function (e) {
+
+        numericButtons[i].addEventListener("click", function (e) {
 
             // DISABLE THE REGULAR LINK BEHAVIOR
             e.preventDefault();
@@ -231,7 +231,7 @@ window.onload = function(e) {
             // UPDATE THE DISPLAY WITH THE NUMBER
             updateDisplay(numericString);
 
-        }
+        });
     }
 
 
@@ -240,14 +240,14 @@ window.onload = function(e) {
      */
     var planetButtons = document.querySelectorAll(".planet");
     for (var i = 0; i < planetButtons.length; i++) {
-        planetButtons[i].onclick = function (e) {
+
+        planetButtons[i].addEventListener("click", function (e) {
 
             e.preventDefault();
 
             setPlanet = this.innerHTML;
             console.log(this.innerHTML + ' ' + planets[this.innerHTML]);
 
-//            this.classList.add('selected');
 
                 if(this.classList.contains('disabled')){
 
@@ -266,23 +266,23 @@ window.onload = function(e) {
                 }
 
 
-        }
+        });
     }
 
     /**
      * Event listener for the calculate button
      */
-    var calculateButton = document.getElementById('calculate-button').onclick = function(e){
+    var calculateButton = document.getElementById('calculate-button').addEventListener("click",function(e){
         e.preventDefault();
         if(setPlanet!='' && setUnits!='' &&numericString!='') {
             outputAges(numericString, setPlanet);
         }
-    }
+    });
 
     /**
      * Event listener for the help button
      */
-    var helpButton = document.getElementById('help-button').onclick = function(e){
+    var helpButton = document.getElementById('help-button').addEventListener("click", function(e){
         e.preventDefault();
 
         var instructionsBox = document.getElementsByClassName('instructions')[0];
@@ -295,7 +295,7 @@ window.onload = function(e) {
            this.innerHTML = '?';
        }
 
-    };
+    });
 
 
 };
